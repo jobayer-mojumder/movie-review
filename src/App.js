@@ -7,9 +7,11 @@ import Home from './pages/Home';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div id="site-content">
         <Header />
-        <Home />
+        <main class="main-content">
+          <Home />
+        </main>
         <Footer />
       </div>
     );
