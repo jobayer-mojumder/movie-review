@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
+import HomeSlider from '../components/home/HomeSlider'
+import Premiere from '../components/home/Premiere'
+import LatestMovie from '../components/home/LatestMovie'
 
 export default class Home extends Component {
     render() {
@@ -7,24 +11,18 @@ export default class Home extends Component {
                 <div className="page">
                     <div className="row">
                         <div className="col-md-9">
-                            <div className="slider">
-                                <ul className="slides">
-                                    <li><a href="#"><img src="dummy/slide-1.jpg" alt="Slide 1" /></a></li>
-                                    <li><a href="#"><img src="dummy/slide-2.jpg" alt="Slide 2" /></a></li>
-                                    <li><a href="#"><img src="dummy/slide-3.jpg" alt="Slide 3" /></a></li>
-                                </ul>
-                            </div>
+                            <HomeSlider />
                         </div>
                         <div className="col-md-3">
                             <div className="row">
                                 <div className="col-sm-6 col-md-12">
                                     <div className="latest-movie">
-                                        <a href="#"><img src="dummy/thumb-1.jpg" alt="Movie 1" /></a>
+                                        <Link to="/"><img src="dummy/thumb-1.jpg" alt="Movie 1" /></Link>
                                     </div>
                                 </div>
                                 <div className="col-sm-6 col-md-12">
                                     <div className="latest-movie">
-                                        <a href="#"><img src="dummy/thumb-2.jpg" alt="Movie 2" /></a>
+                                        <Link to="/"><img src="dummy/thumb-2.jpg" alt="Movie 2" /></Link>
                                     </div>
                                 </div>
                             </div>
@@ -33,93 +31,30 @@ export default class Home extends Component {
                     <div className="row">
                         <div className="col-sm-6 col-md-3">
                             <div className="latest-movie">
-                                <a href="#"><img src="dummy/thumb-3.jpg" alt="Movie 3" /></a>
+                                <Link to="/"><img src="dummy/thumb-3.jpg" alt="Movie 3" /></Link>
                             </div>
                         </div>
                         <div className="col-sm-6 col-md-3">
                             <div className="latest-movie">
-                                <a href="#"><img src="dummy/thumb-4.jpg" alt="Movie 4" /></a>
+                                <Link to="/"><img src="dummy/thumb-4.jpg" alt="Movie 4" /></Link>
                             </div>
                         </div>
                         <div className="col-sm-6 col-md-3">
                             <div className="latest-movie">
-                                <a href="#"><img src="dummy/thumb-5.jpg" alt="Movie 5" /></a>
+                                <Link to="/"><img src="dummy/thumb-5.jpg" alt="Movie 5" /></Link>
                             </div>
                         </div>
                         <div className="col-sm-6 col-md-3">
                             <div className="latest-movie">
-                                <a href="#"><img src="dummy/thumb-6.jpg" alt="Movie 6" /></a>
+                                <Link to="/"><img src="dummy/thumb-6.jpg" alt="Movie 6" /></Link>
                             </div>
                         </div>
                     </div>
 
                     <div className="row">
-                        <div className="col-md-4">
-                            <h2 className="section-title">December premiere</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                            <ul className="movie-schedule">
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="col-md-4">
-                            <h2 className="section-title">November premiere</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                            <ul className="movie-schedule">
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="col-md-4">
-                            <h2 className="section-title">October premiere</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                            <ul className="movie-schedule">
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                                <li>
-                                    <div className="date">16/12</div>
-                                    <h2 className="entry-title"><a href="#">Perspiciatis unde omnis</a></h2>
-                                </li>
-                            </ul>
-                        </div>
+                        <Premiere />
+                        <Premiere />
+                        <Premiere />
                     </div>
                 </div>
             </div>

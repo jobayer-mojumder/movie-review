@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
 export default class Footer extends Component {
     render() {
@@ -16,10 +17,10 @@ export default class Footer extends Component {
                             <div className="widget">
                                 <h3 className="widget-title">Recent Review</h3>
                                 <ul className="no-bullet">
-                                    <li><a href="#">Lorem ipsum dolor</a></li>
-                                    <li><a href="#">Sit amet consecture</a></li>
-                                    <li><a href="#">Dolorem respequem</a></li>
-                                    <li><a href="#">Invenore veritae</a></li>
+                                    <li><Link to="/">Lorem ipsum dolor</Link></li>
+                                    <li><Link to="/">Sit amet consecture</Link></li>
+                                    <li><Link to="/">Dolorem respequem</Link></li>
+                                    <li><Link to="/">Invenore veritae</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -27,10 +28,10 @@ export default class Footer extends Component {
                             <div className="widget">
                                 <h3 className="widget-title">Help Center</h3>
                                 <ul className="no-bullet">
-                                    <li><a href="#">Lorem ipsum dolor</a></li>
-                                    <li><a href="#">Sit amet consecture</a></li>
-                                    <li><a href="#">Dolorem respequem</a></li>
-                                    <li><a href="#">Invenore veritae</a></li>
+                                    <li><Link to="/">Lorem ipsum dolor</Link></li>
+                                    <li><Link to="/">Sit amet consecture</Link></li>
+                                    <li><Link to="/">Dolorem respequem</Link></li>
+                                    <li><Link to="/">Invenore veritae</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -38,10 +39,10 @@ export default class Footer extends Component {
                             <div className="widget">
                                 <h3 className="widget-title">Join Us</h3>
                                 <ul className="no-bullet">
-                                    <li><a href="#">Lorem ipsum dolor</a></li>
-                                    <li><a href="#">Sit amet consecture</a></li>
-                                    <li><a href="#">Dolorem respequem</a></li>
-                                    <li><a href="#">Invenore veritae</a></li>
+                                    <li><Link to="/">Lorem ipsum dolor</Link></li>
+                                    <li><Link to="/">Sit amet consecture</Link></li>
+                                    <li><Link to="/">Dolorem respequem</Link></li>
+                                    <li><Link to="/">Invenore veritae</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -49,10 +50,10 @@ export default class Footer extends Component {
                             <div className="widget">
                                 <h3 className="widget-title">Social Media</h3>
                                 <ul className="no-bullet">
-                                    <li><a href="#">Facebook</a></li>
-                                    <li><a href="#">Twitter</a></li>
-                                    <li><a href="#">Google+</a></li>
-                                    <li><a href="#">Pinterest</a></li>
+                                    <li><Link to="/">Facebook</Link></li>
+                                    <li><Link to="/">Twitter</Link></li>
+                                    <li><Link to="/">Google+</Link></li>
+                                    <li><Link to="/">Pinterest</Link></li>
                                 </ul>
                             </div>
                         </div>
