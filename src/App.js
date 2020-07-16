@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import MovieReviews from './pages/MovieReviews';
+import SingleReview from './components/movieReviews/SingleReview';
+
 import './App.css';
 
 class App extends Component {
@@ -15,7 +17,7 @@ class App extends Component {
         <div id="site-content">
           <Header />
 
-          <main class="main-content">
+          <main className="main-content">
             <Route exact path="/">
               <Home />
             </Route>
@@ -26,6 +28,10 @@ class App extends Component {
 
             <Route path="/reviews">
               <MovieReviews />
+            </Route>
+
+            <Route path="/single">
+              <SingleReview />
             </Route>
 
           </main>
