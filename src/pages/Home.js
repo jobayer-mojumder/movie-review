@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom";
 import HomeSlider from '../components/home/HomeSlider'
 import Premiere from '../components/home/Premiere'
-import LatestMovie from '../components/home/LatestMovie'
+import SingleLatestMovie from '../components/home/SingleLatestMovie'
+import SingleSidebarMovie from '../components/home/SingleSidebarMovie'
 
 export default class Home extends Component {
     render() {
@@ -15,40 +15,16 @@ export default class Home extends Component {
                         </div>
                         <div className="col-md-3">
                             <div className="row">
-                                <div className="col-sm-6 col-md-12">
-                                    <div className="latest-movie">
-                                        <Link to="/"><img src="dummy/thumb-1.jpg" alt="Movie 1" /></Link>
-                                    </div>
-                                </div>
-                                <div className="col-sm-6 col-md-12">
-                                    <div className="latest-movie">
-                                        <Link to="/"><img src="dummy/thumb-2.jpg" alt="Movie 2" /></Link>
-                                    </div>
-                                </div>
+                                <SingleSidebarMovie />
+                                <SingleSidebarMovie />
                             </div>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-sm-6 col-md-3">
-                            <div className="latest-movie">
-                                <Link to="/"><img src="dummy/thumb-3.jpg" alt="Movie 3" /></Link>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-md-3">
-                            <div className="latest-movie">
-                                <Link to="/"><img src="dummy/thumb-4.jpg" alt="Movie 4" /></Link>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-md-3">
-                            <div className="latest-movie">
-                                <Link to="/"><img src="dummy/thumb-5.jpg" alt="Movie 5" /></Link>
-                            </div>
-                        </div>
-                        <div className="col-sm-6 col-md-3">
-                            <div className="latest-movie">
-                                <Link to="/"><img src="dummy/thumb-6.jpg" alt="Movie 6" /></Link>
-                            </div>
-                        </div>
+                        <SingleLatestMovie />
+                        <SingleLatestMovie />
+                        <SingleLatestMovie />
+                        <SingleLatestMovie />
                     </div>
 
                     <div className="row">
