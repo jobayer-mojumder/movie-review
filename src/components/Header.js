@@ -18,7 +18,8 @@ export default class Header extends Component {
                     <div className="main-navigation">
                         <button type="button" className="menu-toggle"><i className="fa fa-bars"></i></button>
                         <ul className="menu">
-                            <li className="menu-item current-menu-item"><NavLink to="/" activeClassName="">Home</NavLink></li>
+                            <li className="menu-item"><NavLink to="/">Home</NavLink></li>
+                            <li className="menu-item"><NavLink to="/reviews">Movie Reviews</NavLink></li>
                             <li className="menu-item"><NavLink to="/about">About</NavLink></li>
                         </ul>
 

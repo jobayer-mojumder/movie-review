@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import About from './pages/About';
+import MovieReviews from './pages/MovieReviews';
 import './App.css';
 
 class App extends Component {
@@ -18,9 +19,15 @@ class App extends Component {
             <Route exact path="/">
               <Home />
             </Route>
+
             <Route path="/about">
               <About />
             </Route>
+
+            <Route path="/reviews">
+              <MovieReviews />
+            </Route>
+
           </main>
           <Footer />
         </div>
