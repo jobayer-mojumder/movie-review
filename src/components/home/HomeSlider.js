@@ -3,7 +3,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 
 export default class HomeSlider extends Component {
+    constructor(props) {
+        super()
+    }
     render() {
+
+
         return (
             <div className="slider">
                 <ul className="slides">

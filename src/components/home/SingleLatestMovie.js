@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 
+import StarRatings from 'react-star-ratings';
+
 export default class SingleLatestMovie extends Component {
 
     constructor(props) {
-        super(props)
+        super()
     }
 
     getYear(data) {
@@ -33,6 +35,11 @@ export default class SingleLatestMovie extends Component {
                         <div className="back">
                             <h4>{this.props.movie.title} ({this.getYear(this.props.movie.release_date)})</h4>
                             <p>{this.getShortOverview(this.props.movie.overview)}</p>
+                            {/* <StarRatings
+                                rating={2.403}
+                                starDimension="40px"
+                                starSpacing="15px"
+                            /> */}
                         </div>
                     </div>
                 </div>

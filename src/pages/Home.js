@@ -4,6 +4,10 @@ import Premiere from '../components/home/Premiere'
 import SingleLatestMovie from '../components/home/SingleLatestMovie'
 import SingleSidebarMovie from '../components/home/SingleSidebarMovie'
 
+
+import { css } from "@emotion/core";
+import ClipLoader from "react-spinners/ClipLoader";
+
 export default class Home extends Component {
 
     constructor() {
@@ -36,6 +40,12 @@ export default class Home extends Component {
 
     render() {
 
+        const override = css`
+            display: block;
+            margin: 40px auto;
+            text-align: center;
+            `;
+
         let movieData
 
         if (this.state.movies && this.state.movies.length > 0) {
@@ -59,7 +69,12 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        {this.state.loading ? "loading..." : movieData}
+                        <ClipLoader
+                            css={override}
+                            size={100}
+                            loading={this.state.loading}
+                        />
+                        {this.state.loading ? null : movieData}
                     </div>
 
                     <div className="row">
