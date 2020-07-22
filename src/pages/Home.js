@@ -5,7 +5,45 @@ import SingleLatestMovie from '../components/home/SingleLatestMovie'
 import SingleSidebarMovie from '../components/home/SingleSidebarMovie'
 
 export default class Home extends Component {
+
+    constructor() {
+        super()
+        this.state = {
+            movies: [],
+            loading: false
+        }
+    }
+
+    componentDidMount() {
+
+        const query = process.env.REACT_APP_API_URL +
+            "movie/popular?api_key=" +
+            process.env.REACT_APP_API_KEY +
+            "&language=en-US&page=1"
+
+        this.setState({ loading: true })
+
+        fetch(query)
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    movies: data.results,
+                    loading: false
+                })
+                console.log(this.state.movies);
+            })
+    }
+
     render() {
+
+        let movieData
+
+        if (this.state.movies && this.state.movies.length > 0) {
+
+            movieData = this.state.movies.map((item, index) => {
+                return <SingleLatestMovie key={item.id} movie={item} />
+            })
+        }
         return (
             <div className="container">
                 <div className="page">
@@ -21,10 +59,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <SingleLatestMovie />
-                        <SingleLatestMovie />
-                        <SingleLatestMovie />
-                        <SingleLatestMovie />
+                        {this.state.loading ? "loading..." : movieData}
                     </div>
 
                     <div className="row">
