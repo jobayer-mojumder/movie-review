@@ -2,7 +2,6 @@
   "name": "movie-review",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jobayermojumder.github.io/movie-review",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

@@ -42,64 +42,6 @@ export default class About extends Component {
                             </ul>
                         </div>
                     </div>
-
-                    <h2 className="section-title">Our Team</h2>
-                    <div className="row">
-
-                        <div className="col-md-3">
-                            <div className="team">
-                                <figure className="team-image"><img src="dummy/person-1.jpg" alt="" /></figure>
-                                <h2 className="team-name">Sarah Stuart</h2>
-                                <small className="team-title">Co-founder</small>
-                                <div className="social-links">
-                                    <Link to="/" className="facebook"><i className="fa fa-facebook"></i></Link>
-                                    <Link to="/" className="twitter"><i className="fa fa-twitter"></i></Link>
-                                    <Link to="/" className="google-plus"><i className="fa fa-google-plus"></i></Link>
-                                    <Link to="/" className="pinterest"><i className="fa fa-pinterest"></i></Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="team">
-                                <figure className="team-image"><img src="dummy/person-2.jpg" alt="" /></figure>
-                                <h2 className="team-name">John Doe</h2>
-                                <small className="team-title">Managing Director</small>
-                                <div className="social-links">
-                                    <Link to="/" className="facebook"><i className="fa fa-facebook"></i></Link>
-                                    <Link to="/" className="twitter"><i className="fa fa-twitter"></i></Link>
-                                    <Link to="/" className="google-plus"><i className="fa fa-google-plus"></i></Link>
-                                    <Link to="/" className="pinterest"><i className="fa fa-pinterest"></i></Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="team">
-                                <figure className="team-image"><img src="dummy/person-3.jpg" alt="" /></figure>
-                                <h2 className="team-name">Jessica Branson</h2>
-                                <small className="team-title">Reviewer</small>
-                                <div className="social-links">
-                                    <Link to="/" className="facebook"><i className="fa fa-facebook"></i></Link>
-                                    <Link to="/" className="twitter"><i className="fa fa-twitter"></i></Link>
-                                    <Link to="/" className="google-plus"><i className="fa fa-google-plus"></i></Link>
-                                    <Link to="/" className="pinterest"><i className="fa fa-pinterest"></i></Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="team">
-                                <figure className="team-image"><img src="dummy/person-4.jpg" alt="" /></figure>
-                                <h2 className="team-name">Sarah Stuart</h2>
-                                <small className="team-title">Consultant</small>
-                                <div className="social-links">
-                                    <Link to="/" className="facebook"><i className="fa fa-facebook"></i></Link>
-                                    <Link to="/" className="twitter"><i className="fa fa-twitter"></i></Link>
-                                    <Link to="/" className="google-plus"><i className="fa fa-google-plus"></i></Link>
-                                    <Link to="/" className="pinterest"><i className="fa fa-pinterest"></i></Link>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </div>
         )
