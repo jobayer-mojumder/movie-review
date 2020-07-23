@@ -58,7 +58,7 @@ export default class HomeSlider extends Component {
                         navigation={false}
                         enableScroll={true}
                         clickable={true}
-                        active={3}
+                        active={1}
                     >
                         {this.state.loading ? <img src="#" /> : movieList}
 
