@@ -20,21 +20,13 @@ class App extends Component {
         <div id="site-content">
           <Header />
           <main className="main-content">
-            <Route exact path="/">
-              <Home />
-            </Route>
+            <Route exact path="/" component={Home} />
 
-            <Route path="/about">
-              <About />
-            </Route>
+            <Route path="/about" component={About} />
 
-            <Route path="/reviews">
-              <MovieReviews />
-            </Route>
+            <Route path="/reviews" component={MovieReviews} />
 
-            <Route path="/single">
-              <SingleReview />
-            </Route>
+            <Route path="/single/:id" component={SingleReview} />
 
           </main>
           <Footer />

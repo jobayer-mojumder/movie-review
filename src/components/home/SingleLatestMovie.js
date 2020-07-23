@@ -22,21 +22,25 @@ export default class SingleLatestMovie extends Component {
     }
 
     render() {
+
         return (
             <div className="col-sm-6 col-md-3">
-                <div className="latest-movie">
-                    <div className="flipper">
-                        <div className="front">
-                            <Link to="/"><img src={process.env.REACT_APP_IMAGE_PATH + this.props.movie.poster_path} alt="Movie 3" /></Link>
-                        </div>
+                <Link to={`/single/${this.props.movie.id}`} >
+                    <div className="latest-movie">
+                        <div className="flipper">
+                            <div className="front">
+                                <img src={process.env.REACT_APP_IMAGE_PATH + this.props.movie.poster_path}
+                                    alt="Movie 3" />
+                            </div>
 
-                        <div className="back">
-                            <h3 className="highlight">{this.props.movie.title} ({this.getYear(this.props.movie.release_date)})</h3>
-                            <h4 className="highlight2">Rating: {this.props.movie.vote_average}</h4>
-                            <p>{this.getShortOverview(this.props.movie.overview)}</p>
+                            <div className="back">
+                                <h3 className="highlight">{this.props.movie.title} ({this.getYear(this.props.movie.release_date)})</h3>
+                                <h4 className="highlight2">Rating: {this.props.movie.vote_average}</h4>
+                                <p>{this.getShortOverview(this.props.movie.overview)}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
         )
     }
