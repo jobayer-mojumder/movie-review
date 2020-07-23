@@ -53,16 +53,19 @@ export default class HomeSlider extends Component {
         return (
             <div className="slider">
                 <ul className="slides">
-                    <Coverflow width="960" height="350"
-                        displayQuantityOfSide={3}
-                        navigation={false}
-                        enableScroll={true}
-                        clickable={true}
-                        active={1}
-                    >
-                        {this.state.loading ? <img src="#" /> : movieList}
 
-                    </Coverflow>
+                    {this.state.loading ? null :
+                        <Coverflow width="960" height="350"
+                            displayQuantityOfSide={3}
+                            navigation={false}
+                            enableScroll={true}
+                            clickable={true}
+                            active={1}
+                        >
+                            {movieList}
+
+                        </Coverflow>
+                    }
                 </ul>
             </div>
         )
