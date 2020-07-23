@@ -8,6 +8,8 @@ import SingleSidebarMovie from '../components/home/SingleSidebarMovie'
 import { css } from "@emotion/core";
 import ClipLoader from "react-spinners/ClipLoader";
 
+import axios from 'axios';
+
 export default class Home extends Component {
 
     constructor() {
@@ -21,21 +23,20 @@ export default class Home extends Component {
     componentDidMount() {
 
         const query = process.env.REACT_APP_API_URL +
-            "movie/popular?api_key=" +
+            "/movie/popular?api_key=" +
             process.env.REACT_APP_API_KEY +
             "&language=en-US&page=1"
 
         this.setState({ loading: true })
 
-        fetch(query)
-            .then(response => response.json())
-            .then(data => {
-                this.setState({
-                    movies: data.results,
-                    loading: false
-                })
-                console.log(this.state.movies);
+        axios.get(query).then((res) => {
+            this.setState({
+                movies: res.data.results,
+                loading: false
             })
+            console.log(this.state.movies);
+        });
+
     }
 
     render() {
