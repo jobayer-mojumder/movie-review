@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 
-import StarRatings from 'react-star-ratings';
-
 export default class SingleLatestMovie extends Component {
 
     constructor(props) {
@@ -10,14 +8,14 @@ export default class SingleLatestMovie extends Component {
     }
 
     getYear(data) {
-        var d = new Date(data);
-        var n = d.getFullYear();
-        return n;
+        var res = new Date(data);
+        var year = res.getFullYear();
+        return year;
     }
 
     getShortOverview(data) {
-        if (data.length > 350) {
-            return data.substr(0, 350) + '...'
+        if (data.length > 300) {
+            return data.substr(0, 300) + '...'
         } else {
             return data
         }
@@ -33,13 +31,9 @@ export default class SingleLatestMovie extends Component {
                         </div>
 
                         <div className="back">
-                            <h4>{this.props.movie.title} ({this.getYear(this.props.movie.release_date)})</h4>
+                            <h3 className="highlight">{this.props.movie.title} ({this.getYear(this.props.movie.release_date)})</h3>
+                            <h4 className="highlight2">Rating: {this.props.movie.vote_average}</h4>
                             <p>{this.getShortOverview(this.props.movie.overview)}</p>
-                            {/* <StarRatings
-                                rating={2.403}
-                                starDimension="40px"
-                                starSpacing="15px"
-                            /> */}
                         </div>
                     </div>
                 </div>
